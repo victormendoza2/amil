@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>cola</title>
+
+		<link rel="stylesheet" type="text/css" href="javascript/style.css" />
+		<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+
+		<script type="text/javascript" src="leaflet/leaflet.js"></script>
+		<script type="text/javascript" src="javascript/tab.js"></script>
+
+		<!-- Caminhos paras os dados das camadas -->
+		<script type="text/javascript" src="data/_Anguia_Preliminar_Oficiar_Wgs84.js"></script>
+		<script type="text/javascript" src="data/_Santos_Tomas_1_Oficiar_Wgs84.js"></script>
+		<script type="text/javascript" src="data/_UT_CALLAYUC.js"></script>
+		<script type="text/javascript" src="data/_UT_SanJuanCutervo_Oficiar_Wgs84.js"></script>
+		<script type="text/javascript" src="data/_UT_TORIBIO_CASANOVA_1.js"></script>
+		<script type="text/javascript" src="data/_UT_TORIBIO_CASANOVA_2.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h1>cola</h1>
+		</div>
+		<div class="maintab">
+			<button id="mapBtn" class="mainTablinks" onclick="openMainTab(event, 'mapArea')">Mapa</button>
+			<button class="mainTablinks" onclick="openMainTab(event, 'attributesArea')">Tabelas de Atributos</button>
+		</div>
+		<div id="mapArea" class="mainTabContent">
+			<div id="map"></div>
+		</div>
+
+		<div id="attributesArea" class="mainTabContent">
+			<div class="tab">
+				<button id="_Anguia_Preliminar_Oficiar_Wgs84_btn" class="tablinks" onclick="openTab(event, '_Anguia_Preliminar_Oficiar_Wgs84_tab')">Anguia_Preliminar_Oficiar_Wgs84</button>
+				<button id="_Santos_Tomas_1_Oficiar_Wgs84_btn" class="tablinks" onclick="openTab(event, '_Santos_Tomas_1_Oficiar_Wgs84_tab')">Santos Tomas 1_Oficiar_Wgs84</button>
+				<button id="_UT_CALLAYUC_btn" class="tablinks" onclick="openTab(event, '_UT_CALLAYUC_tab')">UT_CALLAYUC</button>
+				<button id="_UT_SanJuanCutervo_Oficiar_Wgs84_btn" class="tablinks" onclick="openTab(event, '_UT_SanJuanCutervo_Oficiar_Wgs84_tab')">UT_SanJuanCutervo_Oficiar_Wgs84</button>
+				<button id="_UT_TORIBIO_CASANOVA_1_btn" class="tablinks" onclick="openTab(event, '_UT_TORIBIO_CASANOVA_1_tab')">UT_TORIBIO CASANOVA 1</button>
+				<button id="_UT_TORIBIO_CASANOVA_2_btn" class="tablinks" onclick="openTab(event, '_UT_TORIBIO_CASANOVA_2_tab')">UT_TORIBIO CASANOVA 2</button>
+			</div>
+			<div id="_Anguia_Preliminar_Oficiar_Wgs84_tab" class="tabcontent"></div>
+			<div id="_Santos_Tomas_1_Oficiar_Wgs84_tab" class="tabcontent"></div>
+			<div id="_UT_CALLAYUC_tab" class="tabcontent"></div>
+			<div id="_UT_SanJuanCutervo_Oficiar_Wgs84_tab" class="tabcontent"></div>
+			<div id="_UT_TORIBIO_CASANOVA_1_tab" class="tabcontent"></div>
+			<div id="_UT_TORIBIO_CASANOVA_2_tab" class="tabcontent"></div>
+		</div>
+		<script type="text/javascript" src="javascript/map.js"></script>
+		<script type="text/javascript" src="javascript/attributes.js"></script>
+		<script>document.getElementById('mapBtn').click();</script>	</body>
+</html>
